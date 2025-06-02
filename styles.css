@@ -1,8 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto";
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 header {
@@ -16,6 +18,7 @@ header {
     align-items: center;
     border-radius: 0;
     box-shadow: 0 12px 15px rgba(0, 0, 0, .3);
+    z-index: -1;
 }
 
 header > * {
@@ -44,8 +47,25 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+h1, h2, h3 {
+    font-family: "Roboto";
+    font-weight: 9;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
 h2 {
-    color: #fdfdfd;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 #timely-banner {
@@ -58,6 +78,8 @@ h2 {
 }
 
 #timely-banner button {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -95,13 +117,18 @@ h2 {
 }
 
 #signup-form input {
+    font-family: "Roboto";
+    font-weight: 1;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1em;
 }
 
 #signup-form button {
+    font-family: "Roboto";
+    font-weight: 500;
     background-color: #003087;
     color: rgb(247, 246, 246);
     padding: 10px;
@@ -115,6 +142,8 @@ h2 {
 }
 
 #rewards-dashboard .progress-bar {
+    font-family:"Roboto";
+    font-weight: 1;
     width: 100%;
     height: 10px;
     background-color: #ddd;
@@ -122,6 +151,8 @@ h2 {
 }
 
 #rewards-dashboard button {
+    font-family: "Roboto";
+    font-weight: 500;
     background-color: rgb(1, 18, 253);
     color: rgb(255, 255, 255);
     padding: 10px;
@@ -131,6 +162,8 @@ h2 {
 }
 
 #referral-section button {
+    font-family: "Roboto";
+    font-weight: 500;
     background-color: #003087;
     color: white;
     padding: 10px;
@@ -177,11 +210,14 @@ h2 {
 }
 
 #statistical-analysis p {
+    font-family: "Roboto";
+    font-weight: 400;
     margin: 5px 0;
+    font-size: 1em;
 }
 
 #statistical-analysis span {
-    font-weight: italic;
+    font-weight: 600;
     color: #003087;
 }
 
@@ -190,46 +226,144 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+    gap: 10px;
 }
 
 .bank-image {
-    width: 48%;
+  width: 40%;
+   border: #003087 solid 3px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #003087;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.social-circle img {
+    width: 24px;
+    height: 24px;
+}
+
+/* App Download Section Styling */
+#app-download {
+    background-color: #f5f6f5;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.app-download-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.app-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-store-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.app-store-buttons img {
+    height: 40px;
+    width: auto;
+}
+
+.app-image img {
+    height: 100px;
+    width: auto;
+}
+
+.legal-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.legal-links a {
+    color: #003087;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+.legal-links p {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
 /* Footer Styling */
 footer {
     background-color: #003087;
-    color: white;
-    text-align: center;
+    color: #fff;
     padding: 20px 0;
-    margin-top: 20px;
+    text-align: center;
 }
 
-.footer-icons {
+.footer-links {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-bottom: 10px;
 }
 
-.footer-icons a {
-    color: white;
-    font-size: 24px;
+.footer-links a {
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 0.9em;
 }
 
-.footer-icons a:hover {
-    color: #ddd;
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
-/* Icon placeholders (replace with actual icon classes or use a font like FontAwesome) */
-.icon-facebook::before { content: "🌐"; }
-.icon-twitter::before { content: "🐦"; }
-.icon-instagram::before { content: "📸"; }
-.icon-linkedin::before { content: "💼"; }
+footer p {
+    font-size: 0.8em;
+    margin: 5px 0 15px;
+    color: #ccc;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+}
 
 @media (max-width: 760px) {
     .content {
@@ -242,5 +376,47 @@ footer {
     .bank-image {
         width: 100%;
         margin-bottom: 10px;
+    }
+    .app-download-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .app-store-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .app-image img {
+        margin-top: 10px;
+    }
+    .legal-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .legal-links p {
+        text-align: left;
+    }
+    .social-icons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .social-circle {
+        width: 30px;
+        height: 30px;
+    }
+    .social-circle img {
+        width: 18px;
+        height: 18px;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-social {
+        gap: 10px;
+    }
+    .footer-icon {
+        width: 20px;
+        height: 20px;
     }
 }
